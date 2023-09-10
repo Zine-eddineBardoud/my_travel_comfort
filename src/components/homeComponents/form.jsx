@@ -1,9 +1,10 @@
 import React from 'react';
+import ReserveModal from './reserveModal';
 
 const Form = () => {
     return (
         <div>
-            <div className='w-[75%] mx-auto bg-white rounded-full flex justify-evenly py-6 border border-lightgray shadow-md'>
+            <div className='w-[90%] mx-auto bg-white rounded-3xl flex justify-evenly py-6 border border-lightgray shadow-md'>
                 {/* Start Date */}
                 <div>
                     <p className='font-medium'>Date de départ</p>
@@ -39,9 +40,11 @@ const Form = () => {
                     </select>
                 </div>
             </div>
+
             {/* Button */}
             <div className='flex justify-center mt-6'>
-                <button className='text-primary bg-secondary px-8 py-4 rounded-full font-bold'>Reserve maintenant</button>
+                {/* <button className='text-primary bg-secondary px-14 py-4 rounded-full font-bold'>Reserve maintenant</button> */}
+                <ReserveModal />
             </div>
         </div>
     )

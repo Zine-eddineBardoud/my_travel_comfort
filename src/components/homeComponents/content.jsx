@@ -4,7 +4,7 @@ import Form from './form';
 
 const Content = () => {
     return (
-        <div className='h-[100vh] overflow-hidden background-image'>
+        <div className='h-[95vh] overflow-hidden background-image'>
             <div className='ml-14 mt-[22vh]'>
                 <p className='text-6xl font-extrabold text-white'>
                     Allez là où vous devez <br /> 
@@ -22,4 +22,4 @@ const Content = () => {
     )
 }
 
-export default Content
+export default Content;
