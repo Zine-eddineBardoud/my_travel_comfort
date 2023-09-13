@@ -8,13 +8,13 @@ import User3 from '../../assets/images/user3.jpg';
 
 const Testimonials = () => {
     return (
-        <div className='p-10 gradient-background'>
+        <div className='p-10 bg-primary'>
             <div className='text-center'>
                 <p className='text-4xl font-bold text-white'>Avis <span className='text-secondary'>clients</span></p>
                 <p className='text-white text-sm w-[60%] mx-auto mt-2'>Nous mettons tout en œuvre afin de satisfaire nos clients. Découvrez leur avis.</p>
             </div>
-            <div className='flex justify-between items-center mt-10'>
-                <div className="w-1/3 p-2">
+            <div className='lg:flex justify-between items-center mt-10'>
+                <div className="lg:w-1/3 p-2">
                     <div className='bg-white rounded-2xl p-6'>
                         <BiSolidQuoteAltRight className='text-secondary text-5xl' />
                         <p className='text-2xl font-bold my-4'>je pensais avoir déjà répondu ! réservation très simple, service efficace, bravo !</p>
@@ -25,7 +25,7 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <div className='w-1/3 p-2'>
+                <div className='lg:w-1/3 p-2'>
                     <div className='bg-white rounded-2xl p-6'>
                         <BiSolidQuoteAltRight className='text-secondary text-5xl' />
                         <p className='text-2xl font-bold my-4'>Très bien, service impeccable, soigneux et attentif. Je recommande !</p>
@@ -36,7 +36,7 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <div className='w-1/3 p-2'>
+                <div className='lg:w-1/3 p-2'>
                     <div className='bg-white rounded-2xl p-6'>
                         <BiSolidQuoteAltRight className='text-secondary text-5xl' />
                         <p className='text-2xl font-bold my-4'>Réservation rapide, site Web clair, confirmation rapide, digne de confiance.</p>

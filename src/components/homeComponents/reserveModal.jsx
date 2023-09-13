@@ -24,7 +24,7 @@ const ReserveModal = () => {
 
     useEffect(() => {
         if (currentWdith <= 770) {
-            setWidth('95%');
+            setWidth('90%');
             setPadding(2);
         }
     });
@@ -39,16 +39,25 @@ const ReserveModal = () => {
         maxHeight: '90vh',
         borderRadius: '8px',
         bgcolor: 'background.paper',
-        border: '2px solid #000',
         boxShadow: 24,
         p: padding,
+        overflowY: 'scroll'
     };
+
+    const fakeData = [
+        { id: 1, driverName: 'Ernest E. Smith', distance: '3 Km', time: '10 min', price: 34, driverRate: 4, carImg: Car1 },
+        { id: 2, driverName: 'Steven C. Lewis', distance: '6 Km', time: '20 min', price: 50, driverRate: 5, carImg: Car2 },
+        { id: 3, driverName: 'Edwin S. Bowen', distance: '4 Km', time: '13 min', price: 36, driverRate: 3.5, carImg: Car3 },
+        { id: 4, driverName: 'Jeff M. Nichols', distance: '2.1 Km', time: '8 min', price: 30, driverRate: 4.5, carImg: Car4 },
+        { id: 5, driverName: 'John B. Miller', distance: '1 Km', time: '3 min', price: 12, driverRate: 3, carImg: Car5 },
+    ]
 
     return (
         <div>
-            <button onClick={handleOpen} className='text-primary bg-secondary px-14 py-4 rounded-full font-bold'>
+            <button onClick={handleOpen} className='text-sm md:text-base text-primary bg-secondary px-10 md:px-14 py-2 md:py-4 rounded-full font-bold'>
                 Reserve maintenant
             </button>
+
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -63,30 +72,36 @@ const ReserveModal = () => {
                     </div>
 
                     {/* Cards */}
-                    <div>
+                    <div className='flex flex-wrap justify-between items-center'>
                         {/* Card 01 */}
-                        <div className='w-1/2 border border-gray p-2 rounded-xl'>
-                            <div className='flex justify-between'>
-                                <div className='w-1/2'>
-                                    <p className='font-semibold'>Jhon Doe</p>
-                                    <p className='flex items-center'>
-                                        <MdOutlineLocationOn className='text-xl' />
-                                        <p>3 km (10 min)</p>
-                                    </p>
-                                    <Rating name="read-only" value={5} readOnly />
-                                    <p className='font-extrabold text-2xl text-green'>$12</p>
-                                </div>
-                                <div className='w-1/2 flex flex-col justify-end'>
-                                    <img src={Car1} alt="" className='w-72' />
-                                    <div className='flex justify-end'>
-                                        <button className='bg-green p-2 px-8 rounded-md font-medium text-white flex items-center'>
-                                            <AiOutlineSend className='text-lg mr-2 font-bold' />
-                                            Lancer
-                                        </button>
+                        {
+                            fakeData?.map((data, index) => (
+                                <div className="lg:w-1/2">
+                                    <div className='m-2 border border-gray rounded-xl mx-2'>
+                                        <div className='flex justify-between items-center border-b border-gray p-4'>
+                                            <div className='w-1/2'>
+                                                <p className='text-xl font-semibold'>{data?.driverName}</p>
+                                                <p className='flex items-center mb-4'>
+                                                    <MdOutlineLocationOn className='text-xl' />
+                                                    <p>{data?.distance} ({data?.time})</p>
+                                                </p>
+                                                <Rating name="read-only" value={data?.driverRate} precision={0.5} readOnly />
+                                            </div>
+                                            <div className='w-1/2 flex flex-col justify-end'>
+                                                <img src={data?.carImg} alt="" className='w-72' />
+                                            </div>
+                                        </div>
+                                        <div className='flex justify-between items-center p-4'>
+                                            <p className='font-extrabold text-2xl text-green'>{data?.price} EUR</p>
+                                            <button className='bg-green p-2 px-10 rounded-md font-medium text-white flex items-center'>
+                                                <AiOutlineSend className='text-lg mr-2 font-bold' />
+                                                Lancer
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>
 
                 </Box>

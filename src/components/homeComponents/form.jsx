@@ -4,35 +4,35 @@ import ReserveModal from './reserveModal';
 const Form = () => {
     return (
         <div>
-            <div className='w-[90%] mx-auto bg-white rounded-3xl flex justify-evenly py-6 border border-lightgray shadow-md'>
+            <div className='w-[90%] mx-auto bg-white rounded-3xl flex lg:flex-row flex-col justify-evenly py-6 px-4 lg:px-0 border border-lightgray shadow-md'>
                 {/* Start Date */}
-                <div>
+                <div className=''>
                     <p className='font-medium'>Date de départ</p>
-                    <input type="date" className='outline-none text-gray text-lg' />
+                    <input type="date" className='outline-none text-gray text-lg w-full rounded-sm' />
                 </div>
 
                 {/* Start time */}
-                <div>
+                <div className='lg:mt-0 mt-4'>
                     <p className='font-medium'>Heure de départ</p>
-                    <input type="date" className='outline-none text-gray text-lg' />
+                    <input type="date" className='outline-none text-gray text-lg w-full rounded-sm' />
                 </div>
 
                 {/* Start Location */}
-                <div>
+                <div className='lg:mt-0 mt-4'>
                     <p className='font-medium'>Lieu de départ</p>
-                    <input type="text" className='outline-none text-gray text-lg' placeholder='Agadir, Agadir 80000' />
+                    <input type="text" className='outline-none text-gray text-lg w-full rounded-sm' placeholder='Agadir, Agadir 80000' />
                 </div>
 
                 {/* Arrival location */}
-                <div>
+                <div className='lg:mt-0 mt-4'>
                     <p className='font-medium'>Lieu d'arrivée</p>
-                    <input type="text" className='outline-none text-gray text-lg' placeholder='Agadir, Agadir 80000' />
+                    <input type="text" className='outline-none text-gray text-lg w-full rounded-sm' placeholder='Agadir, Agadir 80000' />
                 </div>
 
                 {/* Type of transfer */}
-                <div>
+                <div className='lg:mt-0 mt-4'>
                     <p className='font-medium'>Type de transfert</p>
-                    <select className='border-none outline-none rounded-full text-gray text-lg'>
+                    <select className='border-none outline-none text-gray text-lg w-full rounded-sm'>
                         <option value="opt1">Select an option</option>
                         <option value="opt1">Option 1</option>
                         <option value="opt2">Option 2</option>
