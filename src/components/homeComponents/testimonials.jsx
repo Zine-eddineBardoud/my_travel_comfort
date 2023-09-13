@@ -8,7 +8,7 @@ import User3 from '../../assets/images/user3.jpg';
 
 const Testimonials = () => {
     return (
-        <div className='p-10 gradient-background'>
+        <div className='p-10 bg-primary'>
             <div className='text-center'>
                 <p className='text-4xl font-bold text-white'>Avis <span className='text-secondary'>clients</span></p>
                 <p className='text-white text-sm w-[60%] mx-auto mt-2'>Nous mettons tout en œuvre afin de satisfaire nos clients. Découvrez leur avis.</p>

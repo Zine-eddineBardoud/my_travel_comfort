@@ -6,7 +6,7 @@ import Img4 from '../../assets/images/img5.jpg';
 
 const NosServices = () => {
     return (
-        <div className='p-6 md:p-8 lg:p-10 gradient-background'>
+        <div className='p-6 md:p-8 lg:p-10 bg-primary'>
 
             {/* Cards */}
             <div className='lg:flex justify-between mt-10'>
