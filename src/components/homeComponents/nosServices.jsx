@@ -6,14 +6,14 @@ import Img4 from '../../assets/images/img5.jpg';
 
 const NosServices = () => {
     return (
-        <div className='p-10 gradient-background'>
+        <div className='p-6 md:p-8 lg:p-10 gradient-background'>
 
             {/* Cards */}
-            <div className='flex justify-between mt-10'>
+            <div className='lg:flex justify-between mt-10'>
                 {/* Card 01 */}
-                <div className='w-[40%] px-2 flex flex-col justify-between'>
+                <div className='lg:w-[40%] px-2 flex flex-col justify-between mb-4'>
                     <div className='mb-6'>
-                        <p className='text-4xl font-bold text-white'>Découvrez <span className='text-secondary'>nos services</span></p>
+                        <p className='text-3xl md:text-4xl font-bold text-white'>Découvrez <span className='text-secondary'>nos services</span></p>
                         <p className='text-white text-sm mx-auto mt-2'>
                             Nous assurons vos déplacements quotidiens personnels et professionnels.
                         </p>
@@ -34,8 +34,8 @@ const NosServices = () => {
                 </div>
 
                 {/* Card 02 */}
-                <div className='w-[30%] px-2'>
-                    <div className='relative overflow-hidden'>
+                <div className='lg:w-[30%] px-2'>
+                    <div className='relative overflow-hidden mb-4'>
                         <div className='gradient'></div>
                         <img src={Img2} alt="" className='rounded-2xl' />
                         <div className='absolute bottom-4 px-4'>
@@ -50,7 +50,7 @@ const NosServices = () => {
                 </div>
 
                 {/* Card 03 */}
-                <div className='w-[30%] px-2'>
+                <div className='lg:w-[30%] px-2'>
                     <div className='relative overflow-hidden'>
                         <div className='gradient'></div>
                         <img src={Img3} alt="" className='rounded-2xl' />
