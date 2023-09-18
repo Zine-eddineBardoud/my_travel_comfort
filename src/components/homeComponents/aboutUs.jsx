@@ -6,7 +6,7 @@ const AboutUs = () => {
         <div className='p-6 md:p-8 lg:p-10'>
             <div className='lg:flex justify-between items-center'>
                 <div className='lg:w-1/2 p-4'>
-                    <p className='text-3xl md:text-4xl font-bold text-primary text-center mb-16'><span className='text-secondary'>À propos</span> de MTC</p>
+                    <p className='text-3xl md:text-4xl font-bold text-primary text-center mb-16'><span className='text-lightGreen'>À propos</span> de MTC</p>
                     <p className='text-base text-primary font-medium'>
                         Notre société vous propose un service simple, ponctuel, confortable et sérieux.Un chauffeur pour vos trajets
                         vers les aéroports, les gares, vos rendez-vous médicaux…Nos chauffeurs sauront vous conseiller sur l'horaire

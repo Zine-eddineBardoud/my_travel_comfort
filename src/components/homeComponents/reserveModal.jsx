@@ -13,9 +13,16 @@ import Car3 from '../../assets/images/car5.png'
 import Car4 from '../../assets/images/car6.png'
 import Car5 from '../../assets/images/car7.png'
 
-const ReserveModal = () => {
+const ReserveModal = ({ startDate, startTime, startLocation, endLocation, typeTrnasfer }) => {
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
+    const [showMessage, setShowMessage] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const handleOpen = () => {
+        setOpen(true)
+        handleCheckInputs();
+    };
+
     const handleClose = () => setOpen(false);
 
     const currentWdith = window.innerWidth;
@@ -50,11 +57,48 @@ const ReserveModal = () => {
         { id: 3, driverName: 'Edwin S. Bowen', distance: '4 Km', time: '13 min', price: 36, driverRate: 3.5, carImg: Car3 },
         { id: 4, driverName: 'Jeff M. Nichols', distance: '2.1 Km', time: '8 min', price: 30, driverRate: 4.5, carImg: Car4 },
         { id: 5, driverName: 'John B. Miller', distance: '1 Km', time: '3 min', price: 12, driverRate: 3, carImg: Car5 },
-    ]
+    ];
+
+    // ============================================================
+    const handleSendFormData = () => {
+        // try {
+        console.log('Start Date :', startDate);
+        console.log('Start Time :', startTime);
+        console.log('Start Location :', startLocation);
+        console.log('End Location :', endLocation);
+        console.log('Type Trnasfer :', typeTrnasfer);
+        // } catch (error) {
+        //     console.log('Error sending from data (form.jsx) :', error);
+        // }
+    };
+
+    const handleCheckInputs = () => {
+        if (startDate != '' && startTime != '' && startLocation != '' && endLocation != '' && typeTrnasfer != '') {
+            // handleSendFormData();
+            console.log('Start Date :', startDate);
+            console.log('Start Time :', startTime);
+            console.log('Start Location :', startLocation);
+            console.log('End Location :', endLocation);
+            console.log('Type Trnasfer :', typeTrnasfer);
+            handleOpen();
+            return;
+        } else {
+            setShowMessage(true);
+            setMessage('You should fill all the inputs !!')
+        }
+    }
 
     return (
         <div>
-            <button onClick={handleOpen} className='text-sm md:text-base text-primary bg-secondary px-10 md:px-14 py-2 md:py-4 rounded-full font-bold'>
+            {
+                showMessage && (
+                    <div className='mb-4'>
+                        <p className='text-[red] font-medium text-sm text-center'>{message}</p>
+                    </div>
+                )
+            }
+
+            <button onClick={handleCheckInputs} className='text-sm md:text-base text-primary bg-secondary px-10 md:px-14 py-2 md:py-4 rounded-full font-bold'>
                 Reserve maintenant
             </button>
 
@@ -76,7 +120,7 @@ const ReserveModal = () => {
                         {/* Card 01 */}
                         {
                             fakeData?.map((data, index) => (
-                                <div className="lg:w-1/2">
+                                <div key={index} className="lg:w-1/2">
                                     <div className='m-2 border border-gray rounded-xl mx-2'>
                                         <div className='flex justify-between items-center border-b border-gray p-4'>
                                             <div className='w-1/2'>

@@ -5,7 +5,7 @@ const Section1 = () => {
     return (
         <div className='p-6 md:p-8 lg:p-10'>
             <p className='text-3xl md:text-4xl font-bold text-primary text-center mb-10'>
-                Réservez <span className='text-secondary'>votre chauffeur</span> en toute  <span className='text-secondary'>simplicité</span>
+                Réservez <span className='text-lightGreen'>votre chauffeur</span> en toute  <span className='text-lightGreen'>simplicité</span>
             </p>
             <div className='lg:flex justify-between items-center'>
                 <div className='lg:w-1/2 lg:flex'>
